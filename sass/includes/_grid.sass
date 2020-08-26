@@ -1,0 +1,65 @@
+$gridCount: 16
+$smallGridCount: 9
+
+.hm-l-grid
+  display: grid
+  grid-template-columns: repeat($gridCount, minmax(0, 1fr))
+  & > *
+    grid-column: span $gridCount
+  &__small
+    grid-template-columns: repeat($smallGridCount, minmax(0, 1fr))
+    & > *
+      grid-column: span $smallGridCount
+
+// Grid Spans
+@for $i from 1 through $gridCount
+  .hm-l-grid--span-#{$i}
+    grid-column: span #{$i}
+
+@media(min-width: $screen-sm + 1)
+  @for $i from 1 through $gridCount
+    .hm-l-grid--span-#{$i}-sm
+      grid-column: span #{$i}
+
+@media(min-width: $screen-md + 1)
+  @for $i from 1 through $gridCount
+    .hm-l-grid--span-#{$i}-md
+      grid-column: span #{$i}
+
+
+//Small Grid Spans
+@for $i from 1 through $smallGridCount
+  .hm-l-grid__small--span-#{$i}
+    grid-column: span #{$i}
+  
+@media(min-width: $screen-sm + 1)
+  @for $i from 1 through $smallGridCount
+    .hm-l-grid__small--span-#{$i}-sm
+      grid-column: span #{$i}
+
+@media(min-width: $screen-md + 1)
+  @for $i from 1 through $smallGridCount
+    .hm-l-grid__small--span-#{$i}-md
+      grid-column: span #{$i}
+
+
+// Grid Offsets
+@for $i from 1 through $gridCount - 1
+  .hm-l-grid--offset-#{$i}
+    margin-left: calc(100% / #{$gridCount} * #{$i})
+
+@media(min-width: $screen-sm + 1)
+  @for $i from 1 through $gridCount - 1
+    .hm-l-grid--offset-#{$i}-sm
+      margin-left: calc(100% / #{$gridCount} * #{$i})
+
+
+//Small Gird Offsets
+@for $i from 1 through $smallGridCount - 1
+  .hm-l-grid__small--offset-#{$i}
+    margin-left: calc(100% / #{$smallGridCount} * #{$i})
+
+@media(min-width: $screen-sm + 1)
+  @for $i from 1 through $smallGridCount - 1
+    .hm-l-grid__small--offset-#{$i}-sm
+      margin-left: calc(100% / #{$smallGridCount} * #{$i})

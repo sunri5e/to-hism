@@ -1,0 +1,37 @@
+.hm-l-header
+  position: fixed
+  z-index: 1
+  width: 100%
+  top: 0
+  left: 0
+  padding-top: $size-base * 4.5
+  padding-bottom: $size-base * 3.5
+  background: #fff
+  &-nav
+    display: flex
+    align-items: center
+    @media(min-width: $screen-sm + 1)
+      padding-left: $size-base * 8
+    &--logo
+      display: block
+      line-height: 0
+      img
+        height: 47px
+    &--menu
+      display: flex
+      margin-left: auto
+      &-item
+        margin-right: $size-base * 9
+        line-height: 1
+        &:last-child
+          margin-right: 0
+    &--link
+      color: $color-text
+      text-decoration: none
+      line-height: 1
+      &:hover
+        text-decoration: underline
+      &__active
+        font-weight: bold
+        &:hover
+          text-decoration: none
