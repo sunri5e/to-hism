@@ -1,3 +1,4 @@
+/*! project-name v0.0.1 | (c) 2022 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
 window.onscroll = function() {setScroll()};
 
 function setScroll() {
@@ -12,5 +13,5 @@ lottie.loadAnimation({
   renderer: 'svg',
   loop: false,
   autoplay: true,
-  path: './js/loader.json' // the path to the animation json
+  path: '../loader.json' // the path to the animation json
 });

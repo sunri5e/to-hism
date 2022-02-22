@@ -396,6 +396,16 @@ img {
   .hm-l-grid__small--offset-8-sm {
     margin-left: calc(100% / 9 * 8); } }
 
+@media (max-width: 769px) {
+  .hm-hidden-xs {
+    display: none; } }
+
+.hm-h-mb-32 {
+  margin-bottom: 128px; }
+
+.hm-h-posr {
+  position: relative; }
+
 .hm-l-header {
   position: fixed;
   z-index: 1;
@@ -437,16 +447,6 @@ img {
         font-weight: bold; }
         .hm-l-header-nav--link__active:hover {
           text-decoration: none; }
-
-@media (max-width: 769px) {
-  .hm-hidden-xs {
-    display: none; } }
-
-.hm-h-mb-32 {
-  margin-bottom: 128px; }
-
-.hm-h-posr {
-  position: relative; }
 
 .hm-l-section--title {
   font-weight: bold;
